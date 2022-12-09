@@ -76,6 +76,10 @@
     <Compile Include="Migrations\202212091214165_PhoneEmailValidationAdded.designer.cs">
       <DependentUpon>202212091214165_PhoneEmailValidationAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212091243551_ValidationMobile.cs" />
+    <Compile Include="Migrations\202212091243551_ValidationMobile.designer.cs">
+      <DependentUpon>202212091243551_ValidationMobile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -96,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212091214165_PhoneEmailValidationAdded.resx">
       <DependentUpon>202212091214165_PhoneEmailValidationAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212091243551_ValidationMobile.resx">
+      <DependentUpon>202212091243551_ValidationMobile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

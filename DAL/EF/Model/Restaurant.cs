@@ -22,7 +22,7 @@ namespace DAL.EF.Model
         [Required(ErrorMessage = "Field can't be empty")]
         public string Address { get; set; }
         [Required(ErrorMessage = "Field can't be empty")]
-        [RegularExpression(@"^([0-9]{11})$", ErrorMessage = "Wrong mobile")]
+        [RegularExpression(@"^([0-9]{11})$", ErrorMessage = "Invalid mobile number.")]
         public string Contact { get; set; }
         [Required(ErrorMessage = "Field can't be empty")]
         public string Type { get; set; }
