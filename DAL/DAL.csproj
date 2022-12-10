@@ -85,7 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
-    <Folder Include="Repo\" />
+    <Folder Include="Repos\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
