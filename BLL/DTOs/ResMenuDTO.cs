@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    class ResMenuDTO
+    public class ResMenuDTO
     {
+        public int Id { get; set; }
+        public int ResID { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
     }
 }
