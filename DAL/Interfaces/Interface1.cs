@@ -8,8 +8,8 @@ namespace DAL.Interfaces
 {
     interface Interface1
     {
-        public interface(class, id, string )
-            {
-            }
+       // public interface(class, id, string )
+           // {
+          //  }
     }
 }
