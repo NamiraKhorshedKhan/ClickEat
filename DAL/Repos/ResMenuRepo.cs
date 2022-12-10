@@ -9,39 +9,39 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    public class AdminCusRepo : IRepo<Customer, int, Customer>
+    public class ResMenuRepo : IRepo<Menu, int, Menu>
     {
         ClickEatContext db;
-        internal AdminCusRepo()
+        internal ResMenuRepo()
         {
             db = new ClickEatContext();
         }
-        public Customer Add(Customer obj)
+        public Menu Add(Menu obj)
         {
-            db.Customers.Add(obj);
+            db.Menus.Add(obj);
             db.SaveChanges();
             return obj;
         }
 
         public bool Delete(int id)
         {
-            db.Customers.Remove(db.Customers.Find(id));
+            db.Menus.Remove(db.Menus.Find(id));
             return db.SaveChanges() > 0;
         }
 
-        public List<Customer> Get()
+        public List<Menu> Get()
         {
-            return db.Customers.ToList();
+            return db.Menus.ToList();
         }
 
-        public Customer Get(int id)
+        public Menu Get(int id)
         {
-            return db.Customers.Find(id);
+            return db.Menus.Find(id);
         }
 
-        public bool Update(Customer obj)
+        public bool Update(Menu obj)
         {
-            var ext = db.Customers.Find(obj.Id);
+            var ext = db.Menus.Find(obj.Id);
             db.Entry(ext).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
         }

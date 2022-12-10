@@ -9,39 +9,39 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    public class AdminCusRepo : IRepo<Customer, int, Customer>
+    class CusBookingsRepo : IRepo<Booking, int, Booking>
     {
         ClickEatContext db;
-        internal AdminCusRepo()
+        internal CusBookingsRepo()
         {
             db = new ClickEatContext();
         }
-        public Customer Add(Customer obj)
+        public Booking Add(Booking obj)
         {
-            db.Customers.Add(obj);
+            db.Bookings.Add(obj);
             db.SaveChanges();
             return obj;
         }
 
         public bool Delete(int id)
         {
-            db.Customers.Remove(db.Customers.Find(id));
+            db.Bookings.Remove(db.Bookings.Find(id));
             return db.SaveChanges() > 0;
         }
 
-        public List<Customer> Get()
+        public List<Booking> Get()
         {
-            return db.Customers.ToList();
+            return db.Bookings.ToList();
         }
 
-        public Customer Get(int id)
+        public Booking Get(int id)
         {
-            return db.Customers.Find(id);
+            return db.Bookings.Find(id);
         }
 
-        public bool Update(Customer obj)
+        public bool Update(Booking obj)
         {
-            var ext = db.Customers.Find(obj.Id);
+            var ext = db.Bookings.Find(obj.Id);
             db.Entry(ext).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
         }

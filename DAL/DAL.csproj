@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataAccessFactory.cs" />
     <Compile Include="EF\ClickEatContext.cs" />
     <Compile Include="EF\Model\Admin.cs" />
     <Compile Include="EF\Model\Booking.cs" />
@@ -64,9 +64,8 @@
     <Compile Include="EF\Model\ResToken.cs" />
     <Compile Include="EF\Model\Review.cs" />
     <Compile Include="EF\Model\AdminToken.cs" />
-    <Compile Include="Interfaces\AdminIAuth.cs" />
-    <Compile Include="Interfaces\AdminIRepo.cs" />
-    <Compile Include="Interfaces\Interface1.cs" />
+    <Compile Include="Interfaces\IAuth.cs" />
+    <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202212090447006_TablesAdded.cs" />
     <Compile Include="Migrations\202212090447006_TablesAdded.designer.cs">
       <DependentUpon>202212090447006_TablesAdded.cs</DependentUpon>
@@ -89,7 +88,12 @@
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="Repos\AdminResRepo.cs" />
     <Compile Include="Repos\AdminTokenRepo.cs" />
-    <Compile Include="Repos\Class1.cs" />
+    <Compile Include="Repos\CusBookingsRepo.cs" />
+    <Compile Include="Repos\CustomerRepo.cs" />
+    <Compile Include="Repos\CusTokensRepo.cs" />
+    <Compile Include="Repos\ResMenuRepo.cs" />
+    <Compile Include="Repos\RestaurantRepo.cs" />
+    <Compile Include="Repos\ResTokenRepo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

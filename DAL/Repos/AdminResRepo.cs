@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    public class AdminResRepo : AdminIRepo<Restaurant, int, Restaurant>
+    public class AdminResRepo : IRepo<Restaurant, int, Restaurant>
     {
         ClickEatContext db;
         internal AdminResRepo()

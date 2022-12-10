@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    public class AdminTokenRepo : IRepo<AdminToken, int, AdminToken>
+    public class CusTokenRepo : IRepo<CusToken, int, CusToken>
     {
         ClickEatContext db;
-        internal AdminTokenRepo()
+        internal CusTokenRepo()
         {
             db = new ClickEatContext();
         }
-        public AdminToken Add(AdminToken obj)
+        public CusToken Add(CusToken obj)
         {
-            db.AdminTokens.Add(obj);
+            db.CusTokens.Add(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
@@ -26,21 +26,21 @@ namespace DAL.Repos
         public bool Delete(int id)
         {
             var dbtk = Get(id);
-            db.AdminTokens.Remove(dbtk);
+            db.CusTokens.Remove(dbtk);
             return db.SaveChanges() > 0;
         }
 
-        public List<AdminToken> Get()
+        public List<CusToken> Get()
         {
             throw new NotImplementedException();
         }
 
-        public AdminToken Get(int id)
+        public CusToken Get(int id)
         {
-            return db.AdminTokens.FirstOrDefault(t => t.Tkey.Equals(id));
+            return db.CusTokens.FirstOrDefault(t => t.Tkey.Equals(id));
         }
 
-        public bool Update(AdminToken obj)
+        public bool Update(CusToken obj)
         {
             var dbtk = Get(obj.Tkey);
             db.Entry(dbtk).CurrentValues.SetValues(obj);
