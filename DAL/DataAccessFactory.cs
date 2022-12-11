@@ -36,7 +36,7 @@ namespace DAL
             return new AdminResRepo();
         }
 
-        public static IRepo<DAL.EF.Model.AdminToken, int, AdminToken> AdminTokenAccess()
+        public static IRepo<DAL.EF.Model.AdminToken, int, AdminToken> AdminTokenDataAccess()
         {
             return new AdminTokenRepo();
         }

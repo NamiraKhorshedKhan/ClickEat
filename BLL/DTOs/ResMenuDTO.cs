@@ -12,5 +12,6 @@ namespace BLL.DTOs
         public int ResID { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
+        public RestaurantDTO RestaurantDTO { get; set; }
     }
 }

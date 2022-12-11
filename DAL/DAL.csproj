@@ -82,6 +82,10 @@
     <Compile Include="Migrations\202212091243551_ValidationMobile.designer.cs">
       <DependentUpon>202212091243551_ValidationMobile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212110239478_VirtualKeywordAdded.cs" />
+    <Compile Include="Migrations\202212110239478_VirtualKeywordAdded.designer.cs">
+      <DependentUpon>202212110239478_VirtualKeywordAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminCusRepo.cs" />
@@ -112,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212091243551_ValidationMobile.resx">
       <DependentUpon>202212091243551_ValidationMobile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212110239478_VirtualKeywordAdded.resx">
+      <DependentUpon>202212110239478_VirtualKeywordAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

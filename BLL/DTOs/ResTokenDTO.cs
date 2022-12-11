@@ -13,5 +13,6 @@ namespace BLL.DTOs
         public System.DateTime Creation { get; set; }
         public Nullable<System.DateTime> Expiration { get; set; }
         public int ResID { get; set; }
+        public RestaurantDTO RestaurantDTO { get; set; }
     }
 }

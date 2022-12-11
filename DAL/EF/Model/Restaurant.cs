@@ -26,12 +26,12 @@ namespace DAL.EF.Model
         public string Contact { get; set; }
         [Required(ErrorMessage = "Field can't be empty")]
         public string Type { get; set; }
-        public List<ResToken> ResTokens { get; set; }
-        public List<Menu> Menus { get; set; }
-        public List<Booking> Bookings { get; set; }
-        public List<Review> Reviews { get; set; }
-        public List<Rating> Ratings { get; set; }
-        public List<Payment> Payments { get; set; }
+        public virtual List<ResToken> ResTokens { get; set; }
+        public virtual List<Menu> Menus { get; set; }
+        public virtual List<Booking> Bookings { get; set; }
+        public virtual List<Review> Reviews { get; set; }
+        public virtual List<Rating> Ratings { get; set; }
+        public virtual List<Payment> Payments { get; set; }
         public Restaurant()
         {
             ResTokens = new List<ResToken>();

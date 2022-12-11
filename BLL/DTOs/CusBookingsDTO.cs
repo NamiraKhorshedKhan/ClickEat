@@ -14,5 +14,7 @@ namespace BLL.DTOs
         public int Number { get; set; }
         public DateTime Time { get; set; }
         public string Status { get; set; }
+        public RestaurantDTO RestaurantDTO { get; set; }
+        public CustomerDTO CustomerDTO { get; set; }
     }
 }

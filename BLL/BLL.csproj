@@ -45,14 +45,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DTOs\AdminAdminTokenDTO.cs" />
     <Compile Include="DTOs\AdminCusDTO.cs" />
     <Compile Include="DTOs\AdminDTO.cs" />
     <Compile Include="DTOs\AdminResDTO.cs" />
     <Compile Include="DTOs\AdminTokenDTO.cs" />
     <Compile Include="DTOs\CusBookingsDTO.cs" />
+    <Compile Include="DTOs\CusCusTokenDTO.cs" />
     <Compile Include="DTOs\CusTokenDTO.cs" />
     <Compile Include="DTOs\CustomerDTO.cs" />
     <Compile Include="DTOs\ResMenuDTO.cs" />
+    <Compile Include="DTOs\ResResToken.cs" />
     <Compile Include="DTOs\RestaurantDTO.cs" />
     <Compile Include="DTOs\ResTokenDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
