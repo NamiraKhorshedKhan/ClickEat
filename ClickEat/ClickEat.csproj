@@ -135,6 +135,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Auth\Class1.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

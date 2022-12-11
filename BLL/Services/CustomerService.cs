@@ -2,7 +2,6 @@
 using BLL.DTOs;
 using DAL;
 using DAL.EF.Model;
-using DAL.Repos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,18 +17,31 @@ namespace BLL.Services
             var data = DataAccessFactory.CustomerDataAccess().Get();
             var config = new MapperConfiguration(c => {
                 c.CreateMap<Customer, CustomerDTO>();
+                c.CreateMap<CusToken, CusTokenDTO>();
             });
             var mapper = new Mapper(config);
             return mapper.Map<List<CustomerDTO>>(data);
         }
         public static CustomerDTO Get(int id)
         {
-            var data = DataAccessFactory.CustomerDataAccess().Get();
+            var data = DataAccessFactory.CustomerDataAccess().Get(id);
             var config = new MapperConfiguration(c => {
                 c.CreateMap<Customer, CustomerDTO>();
+                c.CreateMap<ResToken, ResTokenDTO>();
             });
             var mapper = new Mapper(config);
             return mapper.Map<CustomerDTO>(data);
+        }
+
+        public static ResResTokenDTO GetTokens(int id)
+        {
+            var data = DataAccessFactory.CustomerDataAccess().Get(id);
+            var config = new MapperConfiguration(c => {
+                c.CreateMap<Customer, ResResTokenDTO>();
+                c.CreateMap<ResToken, ResTokenDTO>();
+            });
+            var mapper = new Mapper(config);
+            return mapper.Map<ResResTokenDTO>(data);
         }
         public static CustomerDTO Add(CustomerDTO data)
         {
@@ -41,7 +53,7 @@ namespace BLL.Services
             var dbobj = mapper.Map<Customer>(data);
             var ret = DataAccessFactory.CustomerDataAccess().Add(dbobj);
             return mapper.Map<CustomerDTO>(ret);
+
         }
     }
 }
-
